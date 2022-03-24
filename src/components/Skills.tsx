@@ -1,6 +1,3 @@
-import { motion, motionValue, useTransform, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-
 const Skills = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
@@ -58,12 +55,12 @@ const Skill = ({ color, backgroundColor, title, subtitle }: SkillProps) => {
       <div className="absolute top-2 w-full h-full ">
         <h2 className="text-xl tracking-wider text-center">{subtitle}</h2>
       </div>
-      <motion.div className="grid place-content-center absolute top-0 w-full h-full">
+      <div className="grid place-content-center absolute top-0 w-full h-full">
         <h1 className="font-serif text-[100px] 2xl:text-[140px] grid leading-none">
           <span>{title[0]}</span>
           <span>{title[1]}</span>
         </h1>
-      </motion.div>
+      </div>
     </div>
   )
 }

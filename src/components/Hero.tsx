@@ -1,7 +1,6 @@
 import { claas } from 'claas'
 import { useEffect, useState } from 'react'
 import { shuffle } from 'lodash'
-import { HashLink } from 'react-router-hash-link'
 
 const Hero = () => {
   const colors = useColors()
@@ -28,10 +27,10 @@ const Hero = () => {
         </TitleContainer>
 
         <Links>
-          <Link to="/#whoami">whoami</Link>
-          <Link to="/">projects</Link>
-          <Link to="/">non-tech me</Link>
-          <Link to="/">contacts</Link>
+          <Link>whoami</Link>
+          <Link>projects</Link>
+          <Link>non-tech me</Link>
+          <Link>contacts</Link>
         </Links>
       </div>
     </div>
@@ -80,7 +79,7 @@ const Links = claas.div`
     flex-col col-start-2 col-span-6 md:col-span-1 md:col-start-7 justify-center
 `
 
-const Link = claas.custom(HashLink)`
+const Link = claas.button`
     text-xl font-serif duration-300 
     hover:bg-light-just hover:text-dark-bit hover:pl-7
     hover:relative 
