@@ -1,18 +1,6 @@
-import { motion, motionValue, useTransform } from 'framer-motion'
-
 const Me = () => {
-  const contentOffsetY = motionValue(0)
-
-  const y = useTransform(contentOffsetY, [0, -100], [0, 50], {
-    clamp: false,
-  })
-
-  console.log({
-    y,
-  })
-
   return (
-    <div className="min-h-screen grid grid-cols-8">
+    <div className="grid grid-cols-8 pb-32" id="whoami">
       <div className="col-start-1 row-start-1 sm:col-start-2 col-span-8 sm:">
         <h1 className="font-serif text-[160px] text-white">Me</h1>
       </div>
